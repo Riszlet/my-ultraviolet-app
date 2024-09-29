@@ -1,10 +1,12 @@
 // Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", () => {
-    const changeTextBtn = document.getElementById("changeTextBtn");
+    const searchBtn = document.getElementById("searchBtn");
+    const searchInput = document.getElementById("searchInput");
     const displayText = document.getElementById("displayText");
 
-    // Add a click event listener to the button
-    changeTextBtn.addEventListener("click", () => {
-        displayText.textContent = "You clicked the button!";
+    // Add a click event listener to the search button
+    searchBtn.addEventListener("click", () => {
+        const query = searchInput.value;
+        displayText.textContent = `You searched for: "${query}"`;
     });
 });
